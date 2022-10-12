@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Card } from 'react-bootstrap'
 
 const Tweet = (props) => {
 
@@ -16,14 +17,15 @@ const Tweet = (props) => {
     const author = props.author
     const date = props.date
     return (
-        <div>
-            <h3>{text.toUpperCase()}</h3> 
-            <h6>{date.toUpperCase()} by {author.toUpperCase()}</h6>
-            <br></br>
-            <h1>counter: {counter}</h1>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
-        </div>
+<Card style={{ width: '18rem' }}>
+    <Card.Body>
+        <Card.Title>{date}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{author}</Card.Subtitle>
+        <Card.Text>
+          {text}
+        </Card.Text>
+    </Card.Body>
+</Card>
     )
 }
 
