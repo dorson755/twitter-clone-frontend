@@ -26,7 +26,7 @@ function App() {
   )
 
   return (
-<div>
+<div style={{background: '#c0c0c0', padding: '30px'}}>
   {data.map (tweet => <Tweet key = {tweet.id} {...tweet} />)}
 </div>  );
 }

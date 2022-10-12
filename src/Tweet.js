@@ -17,10 +17,10 @@ const Tweet = (props) => {
     const author = props.author
     const date = props.date
     return (
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '50rem', margin: 'auto', marginBottom: '30px' }}>
     <Card.Body>
-        <Card.Title>{date}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{author}</Card.Subtitle>
+        <Card.Title>{author}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
         <Card.Text>
           {text}
         </Card.Text>
