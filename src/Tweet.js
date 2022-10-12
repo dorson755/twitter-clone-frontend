@@ -8,7 +8,10 @@ const Tweet = (props) => {
         setCounter( counter + 4)
     }
 
-
+    const decrement = () => {
+        setCounter( counter - 4)
+    }
+  
     const text = props.text
     const author = props.author
     const date = props.date
@@ -19,6 +22,7 @@ const Tweet = (props) => {
             <br></br>
             <h1>counter: {counter}</h1>
             <button onClick={increment}>+</button>
+            <button onClick={decrement}>-</button>
         </div>
     )
 }
